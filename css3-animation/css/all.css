@@ -14,13 +14,15 @@
 	position: relative;
 }
 .animation-dot {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -16px 0 0 -16px;
+
 	display: block;
 	background: transparent;
 	width: 32px;
 	height: 32px;
-	position: absolute;
-	left: 50px;
-	top: 30px;
 	-webkit-transition: 0.5s all ease-in-out;
 	transition: 0.5s all ease-in-out;
 }
