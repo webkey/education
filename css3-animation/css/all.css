@@ -1,0 +1,124 @@
+@import url(../../css/normalize.css);
+.wrapper{
+	position: relative;
+	overflow: hidden;
+}
+.center{
+	margin: 0 auto;
+	max-width: 980px;
+}
+.animation-box{
+	width: 200px;
+	height: 80px;
+	background: #fff6e0;
+	position: relative;
+}
+.animation-dot {
+	display: block;
+	background: transparent;
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	left: 50px;
+	top: 30px;
+	-webkit-transition: 0.5s all ease-in-out;
+	transition: 0.5s all ease-in-out;
+}
+.animation-dot:before {
+	content: " ";
+	display: block;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	border-radius: 100%;
+	background: #a177f5;
+	opacity: 1;
+	-webkit-transition: 0.15s all ease-in-out;
+	transition: 0.15s all ease-in-out;
+}
+.animation-dot figure {
+	margin: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 32px;
+	height: 32px;
+	border: 2px solid #a177f5;
+	border-radius: 100%;
+	text-indent: -500px;
+	overflow: hidden;
+	opacity: 0.6;
+	-webkit-transition: 0.15s all ease-in-out;
+	transition: 0.15s all ease-in-out;
+	-webkit-animation: radiate 2s ease-in-out infinite;
+	-moz-animation: radiate 2s ease-in-out infinite;
+	animation: radiate 2s ease-in-out infinite;
+}
+@-webkit-keyframes radiate {
+	0% {
+		-webkit-transform: scale(0.2);
+		transform: scale(0.2);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+@-moz-keyframes radiate {
+	0% {
+		-webkit-transform: scale(0.2);
+		transform: scale(0.2);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+@keyframes radiate {
+	0% {
+		-webkit-transform: scale(0.2);
+		transform: scale(0.2);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+.animation-dot:hover {
+	cursor: pointer;
+}
+.animation-dot:hover:before {
+	background: #965eee;
+}
+.animation-dot:hover figure {
+	border: 2px solid #965eee;
+}
+.animation-dot:active:before {
+	background: #4c3770;
+	top: 13px;
+}
+.animation-dot:active figure {
+	top: 3px;
+	border: 2px solid #4c3770;
+}
+.animation-dot.visited:before {
+	opacity: .1;
+	background: #e4e7ee;
+	border: 2px solid #353a3d;
+}
+.animation-dot.visited:hover:before {
+	opacity: 1;
+	background: rgba(255, 255, 255, 0.5);
+	border: 2px solid #a177f5;
+}
+.animation-dot.visited figure {
+	display: none;
+}
