@@ -1,12 +1,3 @@
-@import url(../../css/normalize.css);
-.wrapper{
-	position: relative;
-	overflow: hidden;
-}
-.center{
-	margin: 0 auto;
-	max-width: 980px;
-}
 .animation-box{
 	width: 200px;
 	height: 80px;

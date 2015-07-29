@@ -1,0 +1,80 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,400italic,700italic,300italic,300&subset=latin,cyrillic);
+@import url(normalize.css);
+body{
+	font: 14px/1.2 Arial, Helvetica, sans-serif;
+	height: 100%;
+	color: #000;
+	background: #fff;
+	min-width: 990px;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	margin: 0;
+	color: #4d4d4d;
+}
+h1{
+	font-size: 26px;
+	line-height: 30px;
+	padding: 0 0 20px;
+}
+h2{
+	font-size: 24px;
+	line-height: 22px;
+	padding: 0 0 20px;
+}
+h3{
+	font-size: 20px;
+	line-height: 18px;
+	padding: 0 0 15px;
+}
+h4{
+	font-size: 16px;
+	line-height: 16px;
+	padding: 0 0 10px;
+}
+h5{
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 100;
+	padding: 0 0 5px;
+}
+h6{
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: 100;
+	padding: 0 0 5px;
+}
+p{
+	padding: 0 0 20px;
+	margin: 0;
+}
+hr{
+	line-height: 1px;
+	height: 0;
+	border: none;
+	background: none;
+	border-bottom: 1px solid #000;
+	margin-bottom: 25px;
+}
+a{
+	color: #00f;
+	outline: none;
+	text-decoration: underline;
+	cursor: pointer;
+}
+a:hover{
+	text-decoration: none;
+}
+img{
+	border: none;
+	vertical-align: top;
+}
+.wrapper{
+	position: relative;
+	overflow: hidden;
+}
+.center{
+	margin: 0 auto;
+	max-width: 980px;
+}
