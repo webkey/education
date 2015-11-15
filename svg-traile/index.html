@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SVG Trail</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-1.10.2.min.js" type="text/javascript"></script>
+        <style>
+            body {background-color: rgba(0,0,0,1);}
+            .svgpos {position: absolute;}
+        </style>
+        <script>
+            $(document).ready(function () {
+                $(document).mousemove(function (e) {
+                    // append SVG 
+                    var csvg = $("<svg class='svgpos' style='opacity:1;'><circle cx='14' cy='14' r='10' stroke-width='2' fill='none' /></svg>");
+
+                    var relX = e.pageX; // mouse position X axis
+                    var relY = e.pageY; // mouse position Y axis
+
+                    $('body').append(csvg);
+                    var csvgCircle = $(csvg).children('circle'); // get the circle
+                    var svgr = $(csvgCircle).attr('r'); // getting circle radius
+
+                    var svgwh = parseInt(svgr) * 2 + 4; // svg width and height value (radius * 2 +(stroke-width * 2))
+                    var margina = -svgr; // margin top and left is negative half of width and height = negative radius
+
+                    $(csvg).css({top: relY, left: relX, width: svgwh, height: svgwh, marginTop: margina, marginLeft: margina});
+                    // random color generator        
+                    var x = Math.round(0xffffff * Math.random()).toString(16);
+                    var y = (6 - x.length);
+                    var z = '000000';
+                    var z1 = z.substring(0, y);
+                    var bgcolor = '#' + z1 + x;
+                    $(csvgCircle).attr('stroke', bgcolor);
+                    // setting up Time Interval function, running time interval for 20 times
+
+                    var timesRun = 0; // time running number
+                    var interval = setInterval(function () {
+                        timesRun += 1;
+                        if (timesRun === 20) {
+                            clearInterval(interval); // stops time Interval after 20 times
+                        }
+                        var svgrCurrent = $(csvgCircle).attr('r'); // current radius of svg Circle
+                        var svgrPlus = parseInt(svgrCurrent) + 2;  // increment radius of svg Circle
+                        var svgcxPlus = parseInt(svgrCurrent) + 4; // increment of cx and cy values, 4 is for stroke-value(2) * 2
+
+                        $(csvgCircle).attr('r', svgrPlus); // new radius
+                        $(csvgCircle).attr('cy', svgcxPlus); // new cx
+                        $(csvgCircle).attr('cx', svgcxPlus); // new cy
+
+                        var svgOpacityCurrent = $(csvg).css('opacity'); // getting current opacity value of current SVG
+                        var svgOpacityMinus = parseFloat(svgOpacityCurrent) - 0.05; // decreasing opcity by 0.05 
+
+                        var svgwPlus = parseInt(svgrPlus) * 2 + 4;  // svg width and height value (radius * 2 +(stroke-width * 2))
+                        $(csvg).css({width: svgwPlus, height: svgwPlus, marginTop: -svgrPlus, marginLeft: -svgrPlus, opacity: svgOpacityMinus});
+                        // removing svg after 2 seconds    
+                        setTimeout(function () {
+                            $(csvg).remove();
+                        }, 2000);
+
+                    }, 100);
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

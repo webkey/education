@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gradient Text</title>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,700' rel='stylesheet' type='text/css'>
+	<style>
+		html {
+			height: 100%;
+			background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+			overflow: hidden;
+		}
+		body{
+
+		}
+		.gradient-text{
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			color: #FFF;
+			text-align: center;
+			font-family: "lato", sans-serif;
+			font-weight: bold;
+			font-size: 50px;
+			letter-spacing: 10px;
+			margin-top: -60px;
+			padding-left: 10px;
+			text-transform: uppercase;
+		}
+		.gradient-text span {
+			background: -webkit-linear-gradient(white, #38495a);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	</style>
+</head>
+<body>
+<div class="gradient-text">
+	<span> gradient text </span> <br> <span> for webkit brousers </span>
+</div>
+</body>
+</html>

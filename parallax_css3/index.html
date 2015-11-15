@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Parallax CSS3</title>
+	<style>
+		body {
+			background-color: #eee;
+			overflow: hidden;
+			width: 100vw;
+			height: 100vh;
+			padding: 0;
+			margin: 0;
+		}
+		.container {
+			perspective: 300px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			height: 100vh;
+			width: 100vw;
+		}
+		.parallaxbox {
+			width: 60vw;
+			height: 300px;
+			margin: 20px auto;
+			position: relative;
+			transform-style: preserve-3d;
+		}
+		.parallaxbox .parallax-base {
+			border: 10px solid gray;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(255, 0, 0, 0.3);
+			opacity: 0.8;
+			text-align: center;
+			font-size: 200%;
+			line-height: 300px;
+			font-weight: bold;
+			color: #fff;
+		}
+		.parallaxbox .parallax-base.layer1 {
+			transform: translateZ(0px);
+		}
+		.parallaxbox .parallax-base.layer2 {
+			transform: translateZ(-50px);
+		}
+		.parallaxbox .parallax-base.layer3 {
+			transform: translateZ(-100px);
+		}
+		p {
+			width: 60vw;
+			margin: 50px auto;
+			font-size: 200%;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+
+	<div class="parallaxbox">
+		<div class="parallax-base layer1"> Layer 1 </div>
+		<div class="parallax-base layer2"> Layer 2 </div>
+		<div class="parallax-base layer3"> Layer 3 </div>
+	</div>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. </p>
+
+
+	<div class="parallaxbox">
+		<div class="parallax-base layer1"> Layer 1 </div>
+		<div class="parallax-base layer2"> Layer 2 </div>
+		<div class="parallax-base layer3"> Layer 3 </div>
+	</div>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<div class="parallaxbox">
+		<div class="parallax-base layer1"> Layer 1 </div>
+		<div class="parallax-base layer2"> Layer 2 </div>
+		<div class="parallax-base layer3"> Layer 3 </div>
+	</div>
+
+</div>
+</body>
+</html>
