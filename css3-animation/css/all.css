@@ -115,3 +115,129 @@
 .animation-dot.visited figure {
 	display: none;
 }
+
+/*Scale (2d)*/
+.scale-box{
+	width: 200px;
+	height: 200px;
+	background: #53cc7e;
+	border: 2px solid #062e48;
+	color: #fff;
+	margin-left: 200px;
+	padding: 20px;
+	-webkit-animation-duration: 4s;
+	animation-duration: 4s;
+	-webkit-animation-name: animated-scale;
+	animation-name: animated-scale;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
+}
+.scale-box:hover{
+	-webkit-animation-play-state: running;
+	animation-play-state: running;
+}
+@keyframes animated-scale{
+	0%{
+		-webkit-transform: scale(1, 1);
+		-moz-transform: scale(1, 1);
+		-ms-transform: scale(1, 1);
+		-o-transform: scale(1, 1);
+		transform: scale(1, 1);
+	}
+	50%{
+		-webkit-transform: scale(-1, 1);
+		-moz-transform: scale(-1, 1);
+		-ms-transform: scale(-1, 1);
+		-o-transform: scale(-1, 1);
+		transform: scale(-1, 1);
+	}
+	100%{
+		-webkit-transform: scale(1, 1);
+		-moz-transform: scale(1, 1);
+		-ms-transform: scale(1, 1);
+		-o-transform: scale(1, 1);
+		transform: scale(1, 1);
+	}
+}
+/*Scale (2d) end*/
+
+/*Skew (2d)*/
+.skew-box{
+	width: 300px;
+	background: #bdcc42;
+	border: 2px solid #ff0270;
+	color: #fff;
+	margin-left: 200px;
+	padding: 20px;
+	-webkit-transform: skew(45deg);
+	-moz-transform: skew(45deg);
+	-ms-transform: skew(45deg);
+	-o-transform: skew(45deg);
+	transform: skew(45deg);
+}
+/*Skew (2d) end*/
+
+/*transform-origin (2d)*/
+#div1 {
+	position: relative;
+	height: 200px;
+	width: 200px;
+	margin: 100px;
+	padding: 10px;
+	border: 1px solid black;
+	display:table;
+}
+#div2 {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+#div3 {
+	padding: 50px;
+	display: inline-block;
+	border: 1px solid black;
+	background-color: red;
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-name: animated-transform-origin;
+	animation-name: animated-transform-origin;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	transform: rotate(45deg);
+}
+#div1:hover #div3 {
+	-webkit-animation-play-state: running;
+	animation-play-state: running;
+}
+@keyframes animated-transform-origin{
+	0%{
+		transform-origin: 0 0;
+	}
+	100%{
+		transform-origin: 0 200px;
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+}
+/*transform-origin (2d) end*/
+
+/*step*/
+div.atf-step {
+	background-image: url(../../img/meteor.png);
+	height: 130px;
+	width: 130px;
+	animation: play 2s steps(49) infinite;
+}
+@keyframes play {
+	0% { background-position:    0 0; }
+	100% { background-position: -6370px 0; }
+}
+/*step end*/
