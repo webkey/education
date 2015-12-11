@@ -1,0 +1,18 @@
+/* parallax */
+.box{
+	min-height: 2000px;
+	position: relative;
+}
+#parallax-end,
+#parallax-middle,
+#parallax-front{
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	text-align: center;
+}
+/*#bg-intro-end{margin: 0 0 -50px;} /* не обязательно */
+/*#bg-intro-middle{margin: 0 0 -150px;} /* не обязательно */
+/*#bg-intro-front{margin: 0 0 -100px;} /* не обязательно */
+/* parallax end */
