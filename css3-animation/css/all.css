@@ -241,3 +241,50 @@ div.atf-step {
 	100% { background-position: -6370px 0; }
 }
 /*step end*/
+
+/*animate perspective*/
+.animate-perspective{
+	width: 222px;
+	background: #38495a;
+	border: 5px solid #495c71;
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+	cursor: default;
+	position: relative;
+}
+.animate-perspective:before{
+	content: 'Lorem ipsum dolor sit amet';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	padding: 32px 25px;
+	color: #495c71;
+	text-shadow: 1px 1px 0 #38495a;
+	font-size: 18px;
+	line-height: 1;
+}
+.animate-perspective a{
+	display: block;
+	padding: 32px 25px;
+	background: #00aef9;
+	color: #fff;
+	font-size: 18px;
+	line-height: 1;
+	text-decoration: none;
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+	/*fade-slide effect*/
+	-webkit-transform: translateY(0px) perspective(100px) rotateX(90deg);
+	-ms-transform: translateY(0px) perspective(100px) rotateX(90deg);
+	transform: translateY(0px) perspective(100px) rotateX(90deg);
+	opacity: 0;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.animate-perspective:hover a{
+	-webkit-transform: translateY(0) perspective(400px) rotateX(0deg);
+	-ms-transform: translateY(0) perspective(400px) rotateX(0deg);
+	transform: translateY(0) perspective(400px) rotateX(0deg);
+	opacity: 1;
+}
+/*animate perspective end*/

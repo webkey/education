@@ -1,0 +1,142 @@
+.fotorama--fullscreen, .fotorama__img{
+	-webkit-box-shadow: none !important
+}
+.fotorama__wrap .fotorama__grab{
+	cursor: -moz-grab
+}
+.fotorama__grabbing *{
+	cursor: -moz-grabbing
+}
+.fotorama__wrap--video .fotorama__stage, .fotorama__wrap--video .fotorama__stage__frame--video, .fotorama__wrap--video .fotorama__stage__frame--video .fotorama__html, .fotorama__wrap--video .fotorama__stage__frame--video .fotorama__img, .fotorama__wrap--video .fotorama__stage__shaft{
+	-ms-transform: none !important
+}
+.fotorama__wrap--css3 .fotorama__thumb-border{
+	-webkit-transition-property: -webkit-transform, width;
+	transition-property: -webkit-transform, width;
+	transition-property: transform, width;
+	-webkit-transition-timing-function: cubic-bezier(0.1, 0, .25, 1);
+	transition-timing-function: cubic-bezier(0.1, 0, .25, 1);
+	-webkit-transition-duration: 0ms;
+	transition-duration: 0ms
+}
+.fotorama__nav, .fotorama__nav__frame{
+	width: auto !important
+}
+.fotorama__wrap *{
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box
+}
+.fotorama__caption__wrap{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+.fotorama__arr, .fotorama__fullscreen-icon, .fotorama__video-close, .fotorama__video-play{
+	background: url(../images/fotorama.png) no-repeat
+}
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 2dppx){
+	.fotorama__arr, .fotorama__fullscreen-icon, .fotorama__video-close, .fotorama__video-play{
+		background: url(../images/fotorama@2x.png) 0 0/96px 160px no-repeat;
+		-webkit-background-size: 96px 160px
+	}
+}
+.fotorama__thumb{
+	width: 100px !important;
+	background-color: #7f7f7f;
+	background-color: rgba(127, 127, 127, .2)
+}
+.fotorama__nav{
+	position: relative;
+	max-width: 100%
+}
+.fotorama__stage{
+	overflow: hidden;
+	position: relative;
+	max-width: 100%
+}
+.fotorama__nav__shaft{
+	margin-bottom: -3px;
+	padding-bottom: 1px;
+	position: relative;
+	left: 0;
+	top: 0;
+	text-align: left
+}
+.fotorama__nav__frame{
+	margin: 0 10px 0 0
+}
+.fotorama__nav--thumbs{
+	overflow: hidden
+}
+.fotorama__thumb{
+	overflow: inherit
+}
+.fotorama__thumb:hover:after{
+	content: "";
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	bottom: -10px;
+	left: -10px;
+	background: rgba(0, 0, 0, .05)
+}
+.fotorama__thumb-border{
+	margin-top: 0 !important;
+	margin-left: -10px !important;
+	padding: 10px;
+	border-color: #666;
+	background-image: #666
+}
+.fotorama__wrap--css3 .fotorama__html, .fotorama__wrap--css3 .fotorama__stage .fotorama__img{
+	-webkit-transition-property: opacity;
+	transition-property: opacity;
+	-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+	-webkit-transition-duration: .3s;
+	transition-duration: .3s
+}
+.fotorama__arr{
+	width: 31px;
+	height: 47px;
+	margin-top: -24px;
+	opacity: .09
+}
+.fotorama__arr.is-hover{
+	opacity: 1
+}
+.fotorama__arr--prev{
+	left: 20px
+}
+.fotorama__arr--next{
+	right: 22px;
+	background-position: -36px 0
+}
+.fotorama__arr--disabled{
+	opacity: 0 !important
+}
+.fotorama__wrap--css3 .fotorama__arr:not(:focus), .fotorama__wrap--css3 .fotorama__fullscreen-icon:not(:focus), .fotorama__wrap--css3 .fotorama__video-close:not(:focus), .fotorama__wrap--css3 .fotorama__video-play:not(:focus){
+	-webkit-transition-property: -webkit-transform, opacity;
+	transition-property: -webkit-transform, opacity;
+	transition-property: transform, opacity;
+	-webkit-transition-duration: .3s;
+	transition-duration: .3s
+}
+.fotorama__nav:after, .fotorama__nav:before, .fotorama__stage:after, .fotorama__stage:before{
+	-webkit-background-size: 1px 100%, 5px 100%;
+	background-size: 1px 100%, 5px 100%
+}
+.fotorama__nav:before, .fotorama__stage:before{
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(25%, rgba(0, 0, 0, .2)), color-stop(75%, rgba(0, 0, 0, .3)), to(rgba(0, 0, 0, 0))), radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .2) 25%, rgba(0, 0, 0, .3) 75%, rgba(0, 0, 0, 0)), -webkit-radial-gradient(0 50%, farthest-side, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .2) 25%, rgba(0, 0, 0, .3) 75%, rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
+	background-position: 0 0, 0 0;
+	left: -10px
+}
+.fotorama__nav:after, .fotorama__stage:after{
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(25%, rgba(0, 0, 0, .2)), color-stop(75%, rgba(0, 0, 0, .3)), to(rgba(0, 0, 0, 0))), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .2) 25%, rgba(0, 0, 0, .3) 75%, rgba(0, 0, 0, 0)), -webkit-radial-gradient(100% 50%, farthest-side, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .2) 25%, rgba(0, 0, 0, .3) 75%, rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
+	background-position: 100% 0, 100% 0;
+	right: -10px
+}
