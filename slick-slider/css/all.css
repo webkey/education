@@ -7,7 +7,7 @@ img{
 	height: auto !important;
 	max-width: 100%;
 }
-.wrapper{
+.center{
 	max-width: 1002px;
 	margin: 0 auto;
 }
@@ -15,4 +15,15 @@ img{
 .slideshow{
 	max-width: 560px;
 	margin: 0 auto;
+}
+
+.slide-syncing-thumbs{
+	width: 100%;
+	clear: both;
+}
+.slide-syncing-thumbs__item{
+	float: left;
+	width: 160px;
+	border: 5px solid #18201c;
+	margin: 0 8px;
 }

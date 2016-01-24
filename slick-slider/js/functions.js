@@ -15,4 +15,22 @@ $(document).ready(function () {
 	$slickElement.slick({
 		dots: true
 	});
+
+
+	$('.slide-syncing').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		fade: true,
+		asNavFor: '.slide-syncing-thumbs'
+	});
+	$('.slide-syncing-thumbs').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.slide-syncing',
+		dots: true,
+		arrows: true,
+		centerMode: false,
+		focusOnSelect: true
+	});
 });
