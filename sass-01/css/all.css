@@ -50,6 +50,7 @@ body {
       top: 150px;
       display: table-cell;
       height: 100%;
+      border-radius: 2px;
       background: #fff; }
       .day-01 .waves span.wave-vertex:nth-child(1) {
         animation: waveAnim 1s 0.01s ease-in-out infinite; }
@@ -91,7 +92,7 @@ body {
         animation: waveAnim 1s 0.19s ease-in-out infinite; }
       .day-01 .waves span.wave-vertex:nth-child(20) {
         animation: waveAnim 1s 0.2s ease-in-out infinite; }
-      .day-01 .waves span.wave-vertex:nth-child(21) {
+      /*.day-01 .waves span.wave-vertex:nth-child(21) {
         animation: waveAnim 1s 0.21s ease-in-out infinite; }
       .day-01 .waves span.wave-vertex:nth-child(22) {
         animation: waveAnim 1s 0.22s ease-in-out infinite; }
@@ -450,7 +451,7 @@ body {
       .day-01 .waves span.wave-vertex:nth-child(199) {
         animation: waveAnim 1s 1.99s ease-in-out infinite; }
       .day-01 .waves span.wave-vertex:nth-child(200) {
-        animation: waveAnim 1s 2s ease-in-out infinite; }
+        animation: waveAnim 1s 2s ease-in-out infinite; }*/
     .day-01 .waves .bubbles {
       position: absolute;
       width: 100%;

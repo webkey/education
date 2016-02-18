@@ -1,0 +1,201 @@
+body{
+	background: #fff;
+}
+/*history*/
+.history{
+	display: block;
+	padding: 0 0 50px;
+}
+
+/*years slider*/
+.years-slider{
+	margin: 0 0 51px;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+}
+.years-slider .slick-list{
+	overflow: visible;
+}
+.years-sldr__item{
+	font-size: 18px;
+	line-height: 48px;
+	font-weight: bold;
+	color: #ccc;
+	text-align: center;
+	height: 48px;
+	width: 80px;
+	border-right: 1px solid #dcdcdc;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/*-webkit-transition: width 0.2s;*/
+	/*transition: width 0.2s;*/
+}
+.years-sldr__item:first-child{
+	border-left: 1px solid #dcdcdc;
+}
+.years-sldr__item>span{
+	display: block;
+	height: 100%;
+	cursor: pointer;
+}
+.years-sldr__item>span:hover,
+.years-sldr__item.slick-current>span{
+	box-shadow: inset 0 0 0 1px #008acf, 0 0 0 1px #008acf;
+	color: #333;
+}
+.years-sldr__item.slick-current>span{
+	color: #2b2a29;
+	font-size: 24px;
+}
+/*years slider end*/
+
+/*history slider*/
+.history-slider{
+	margin: 0;
+	position: relative;
+	background: lightblue;
+	background: rgba(144, 238, 144, 0.53);
+}
+.history-sldr__holder{
+	font-size: 0;
+	letter-spacing: -4px;
+	white-space: nowrap;
+	position: relative;
+	z-index: 0;
+}
+.history-sldr__holder:before,
+.history-sldr__holder:after { content: ""; display: table; }
+.history-sldr__holder:after { clear: both; }
+.history-sldr__item{
+	display: inline-block;
+	vertical-align: top;;
+	position: relative;
+	font-size: 14px;
+	letter-spacing: normal;
+	white-space: normal;
+	width: 80px;
+	height: 210px;
+	cursor: pointer;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.history-sldr__item.slide-current{
+	width: 250px;
+	height: 250px;
+	margin-top: -20px;
+	margin-bottom: -20px;
+}
+.history-sldr__holder.slider-track{
+	left: 0;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.history-sldr__holder.slider-track .history-sldr__item{
+	float: left;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+/*mask under slide prevented click*/
+.history-sldr__item:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+}
+.history-sldr__item.slide-current:after{
+	content: none;
+}
+/*mask under slide prevented click end*/
+
+.history-sldr__item a{
+	display: block;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+/*overlay under image*/
+.history-sldr__item a:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.51);
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+	z-index: 1;
+}
+.history-sldr__item:hover a:before,
+.history-sldr__item.slide-current a:before{
+	opacity: 0;
+}
+/*overlay under image end*/
+
+.history-sldr__item a img{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	max-width: none;
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+.history-sldr__item.slick-current a img{
+	-webkit-filter: none;
+	filter: none;
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+.history-sldr__item a img{}
+
+.history-sldr__prev-btn,
+.history-sldr__next-btn{
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+	-webkit-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	background: lightsalmon;
+	z-index: 9;
+}
+.history-sldr__prev-btn{
+	left: 10px;
+}
+.history-sldr__next-btn{
+	right: 10px;
+}
+.left-stop .history-sldr__prev-btn,
+.right-stop .history-sldr__next-btn{
+	opacity: 0.5;
+	cursor: default;
+}
+.history-sldr__next-btn.btn-hidden,
+.history-sldr__prev-btn.btn-hidden{
+	display: none;
+}
+/*history slider end*/
+/*history end*/
+
+#console{
+	position: fixed;
+	top: 20px;
+	left: 2px;
+	font-size: 12px;
+	padding: 4px 8px;
+	color: #333;
+	background: rgba(224, 255, 255, 0.5);
+	z-index: 99;
+}
